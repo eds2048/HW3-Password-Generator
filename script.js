@@ -27,8 +27,6 @@ function generatePassword() {
     buildPassword();
   }
 
-
-
 function promptsForUser() {
   var passwordLength = prompt("Choose password length between 8 - 128 characters");
   passwordLength = parseInt(passwordLength, 10);
@@ -55,10 +53,11 @@ function buildPassword(){
     if (includeSpecialcharacter === true) {
       charactersArrayForPassword.push(specialcharacterArray);
     }
+
   for (var i =0; i< passwordLength; i++){
     password = password + charactersArrayForPassword[Math.floor(Math.random() * charactersArrayForPassword.length)] 
     
-    }
-
+  }
+  return password;
 }
 
