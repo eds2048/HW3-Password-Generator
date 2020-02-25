@@ -60,33 +60,8 @@ function buildPassword(){
     
   }
 
-
 }
 
-
-
-// Remove this logic? This section? 
-// if (includeUppercase === true) {
-//   for (var i = 0; i < passwordLength; i++) {
-//     passwordResult = passwordResult + lowercaseArray[parseInt[(Math.random() * lowercaseArray.length)]]
-// } 
-// }
-
-// ```GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// ```
-// ```WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-// ```
-
-// ```WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-// ```
-//ask user for password length, >8
-//prompt("Enter pwd length betwen 8-128)
-//check input if between 8-128
-//take input, assign to a variable passwordLength
 
 
 ```WHEN prompted for character types to include in the password
