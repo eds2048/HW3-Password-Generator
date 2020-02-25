@@ -12,6 +12,8 @@ generateBtn.addEventListener("click", writePassword);
 var includeUppercase;
 var includeLowercase;
 var includeSpecialcharacter;
+var passwordLength;
+//var password;
 
 function writePassword() {
   var password = generatePassword();
@@ -19,13 +21,13 @@ function writePassword() {
   passwordText.value = password;
 }
 
-//Main function
+//Main Function
 function generatePassword() {
+    promptsForUser();
+    buildPassword();
+  }
 
-  promptsForUser();
-  buildPassword();
 
-    }
 
 function promptsForUser() {
   var passwordLength = prompt("Choose password length between 8 - 128 characters");
@@ -43,6 +45,7 @@ function promptsForUser() {
 }
 
 function buildPassword(){
+  password = "";
     if(includeUppercase === true){
       charactersArrayForPassword.push(uppercaseArray);
     } 
@@ -52,13 +55,10 @@ function buildPassword(){
     if (includeSpecialcharacter === true) {
       charactersArrayForPassword.push(specialcharacterArray);
     }
-
-  password = "";
-
   for (var i =0; i< passwordLength; i++){
     password = password + charactersArrayForPassword[Math.floor(Math.random() * charactersArrayForPassword.length)] 
     
-  }
+    }
 
 }
 
